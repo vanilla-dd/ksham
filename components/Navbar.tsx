@@ -34,7 +34,7 @@ const Navbar = async () => {
                     <ul className="flex items-center justify-center gap-4">
                         <li>
                             <Button asChild>
-                                <Link href={'/about'}>About</Link>
+                                <Link href="#about">About</Link>
                             </Button>
                         </li>
                         <li>
