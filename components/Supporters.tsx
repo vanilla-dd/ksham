@@ -1,43 +1,46 @@
 import Image from 'next/image'
-import React from 'react'
 
+const images = [
+    {
+        image: '/google.webp',
+        width: 140,
+        height: 140,
+        alt: 'google',
+    },
+    {
+        image: '/iitMandi.webp',
+        width: 140,
+        height: 140,
+        alt: 'IITMandi',
+    },
+    {
+        image: '/siicIITKanpur.webp',
+        width: 300,
+        height: 140,
+        alt: 'IITKanpur',
+    },
+    { image: '/samsung.webp', width: 200, height: 100, alt: 'samsung' },
+    { image: '/AIC.webp', width: 220, height: 140, alt: 'AIC' },
+]
 function Supporters() {
     return (
-        <div>
-            <p className="text-center text-4xl font-bold tracking-wider">
+        <div className="px-4">
+            <p className="text-center text-2xl font-bold tracking-wider md:text-4xl">
                 Supported By
             </p>
-            <div className="flex items-center justify-around">
-                <Image
-                    src="/google.webp"
-                    alt="google"
-                    width={140}
-                    height={140}
-                />
-                <Image
-                    src="/iitMandi.webp"
-                    alt="IIT Mandi"
-                    width={140}
-                    height={140}
-                />
-                <Image
-                    src="/siicIITKanpur.webp"
-                    alt="IIT Kanpur"
-                    width={300}
-                    height={140}
-                />
-                <Image
-                    src="/samsung.webp"
-                    alt="samsung"
-                    width={140}
-                    height={100}
-                />
-                <Image
-                    src="/AIC.webp"
-                    alt="Atal innovation center"
-                    width={220}
-                    height={140}
-                />
+            <div>
+                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 lg:gap-14">
+                    {[...images].map((item, index) => (
+                        <Image
+                            className="w-24 sm:w-32 lg:w-40"
+                            src={item.image}
+                            width={item.width}
+                            height={item.height}
+                            alt={item.alt}
+                            key={index}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )
