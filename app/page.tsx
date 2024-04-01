@@ -1,16 +1,27 @@
+'use client'
 import { Button } from '@/components/ui/button'
 import Navbar from '@/components/Navbar'
 import Link from 'next/link'
-import About from '@/components/About'
+import { motion } from 'framer-motion'
 import Supporters from '@/components/Supporters'
 import Image from 'next/image'
+import About from '@/components/About'
 
 export default function Home() {
     return (
         <>
             <main className="flex min-h-dvh flex-col text-black dark:text-white">
                 <Navbar />
-                <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center gap-4">
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        active: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate="active"
+                    transition={{ duration: 0.5, bounce: 1, damping: 1 }}
+                    className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center gap-4"
+                >
                     <h1 className="relative text-center text-3xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
                         {"World's"} 1<sup>st</sup>
                         <br />
@@ -33,11 +44,11 @@ export default function Home() {
                             <Link href="/early">Get Early Access</Link>
                         </Button>
                     </div>
-                </div>
+                </motion.div>
             </main>
             <Supporters />
 
-            {/* <About /> */}
+            <About />
         </>
     )
 }
