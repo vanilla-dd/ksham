@@ -15,11 +15,11 @@ export function About() {
                                 gradientTransform="rotate(227, 0.5, 0.5)"
                             >
                                 <stop
-                                    stop-color="hsl(265, 55%, 30%)"
+                                    stopColor="hsl(265, 55%, 30%)"
                                     offset="0"
                                 ></stop>
                                 <stop
-                                    stop-color="hsl(265, 55%, 60%)"
+                                    stopColor="hsl(265, 55%, 60%)"
                                     offset="1"
                                 ></stop>
                             </linearGradient>
@@ -27,15 +27,15 @@ export function About() {
                         <path
                             d="M 225.194 226.18 C 227.739 225.643 283.724 212.524 288.814 212.739 C 293.903 212.955 347.237 231.485 352.434 231.557 C 357.631 231.628 413.653 214.388 418.742 214.532 C 423.832 214.675 474.979 235.392 479.674 235.141 C 484.369 234.89 533.868 209.334 536.126 208.259"
                             fill="none"
-                            stroke-width="9"
+                            strokeWidth="9"
                             stroke='url("#SvgjsLinearGradient1000")'
-                            stroke-linecap="round"
-                            stroke-dasharray="0 0"
+                            strokeLinecap="round"
+                            strokeDasharray="0 0"
                         ></path>
                     </svg>
                 </span>
             </h1>
-            <div className="flex justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
                 <div className="flex-1 border px-6 py-4">
                     <h1 className="flex justify-center gap-2 text-lg font-semibold underline">
                         Glasses for Deaf <EarOff />

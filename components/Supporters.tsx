@@ -26,13 +26,41 @@ function Supporters() {
     return (
         <div className="px-4">
             <p className="text-center text-2xl font-bold tracking-wider md:text-4xl">
-                Supported By
+                <span className="relative w-fit">
+                    Supported{' '}
+                    <svg
+                        viewBox="0 0 500 500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="absolute -left-12 -top-5 w-20"
+                    >
+                        <defs>
+                            <linearGradient id="SvgjsLinearGradient1001">
+                                <stop
+                                    stopColor="hsl(340, 45%, 50%)"
+                                    offset="0"
+                                />
+                                <stop
+                                    stopColor="hsl(340, 45%, 80%)"
+                                    offset="1"
+                                />
+                            </linearGradient>
+                        </defs>
+                        <path
+                            d="M 150.127 262.699 C 156.242 247.175 196.704 114.38 208.371 114.85 C 220.037 115.32 272.34 261.535 261.238 267.18 C 250.136 272.825 96.897 180.186 102.636 168.613 C 108.375 157.041 310.817 147.18 315.897 156.965 C 320.978 166.75 168.335 250.795 151.023 261.803"
+                            fill="none"
+                            strokeWidth="10"
+                            stroke='url("#SvgjsLinearGradient1001")'
+                            strokeLinecap="round"
+                        />
+                    </svg>
+                </span>
+                By
             </p>
             <div>
                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 lg:gap-14">
                     {[...images].map((item, index) => (
                         <Image
-                            className="w-24 sm:w-32 lg:w-40"
+                            className="sm:w-30 w-28 md:w-32 lg:w-36"
                             src={item.image}
                             width={item.width}
                             height={item.height}
