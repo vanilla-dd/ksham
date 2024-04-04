@@ -15,23 +15,22 @@ import {
     FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { toast } from 'sonner'
 
 const formSchema = z.object({
-    username: z.string().min(2, {
-        message: 'Username must be at least 2 characters.',
-    }),
+    email: z
+        .string({ invalid_type_error: 'Recheck the email' })
+        .email({ message: 'Enter a valid email' }),
 })
 
 function ProfileForm() {
-    // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            username: '',
+            email: '',
         },
     })
 
-    // 2. Define a submit handler.
     async function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
         try {
@@ -40,10 +39,11 @@ function ProfileForm() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(values.username),
+                body: JSON.stringify(values.email),
             })
             if (response.ok) {
                 // handle success
+                toast.success('Registration Successful')
                 console.log('Email sent successfully')
             } else {
                 // handle error
@@ -55,18 +55,21 @@ function ProfileForm() {
     }
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
                 <FormField
                     control={form.control}
-                    name="username"
+                    name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Username</FormLabel>
+                            <FormLabel>Email</FormLabel>
                             <FormControl>
-                                <Input placeholder="shadcn" {...field} />
+                                <Input
+                                    placeholder="example@gmail.com"
+                                    {...field}
+                                />
                             </FormControl>
                             <FormDescription>
-                                This is your public display name.
+                                {"You'll receive a conformation email"}
                             </FormDescription>
                             <FormMessage />
                         </FormItem>
