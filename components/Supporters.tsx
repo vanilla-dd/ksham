@@ -1,33 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-
-const images = [
-    {
-        image: '/google.webp',
-        width: 140,
-        height: 140,
-        alt: 'google',
-    },
-    {
-        image: '/iitMandi.webp',
-        width: 140,
-        height: 140,
-        alt: 'IITMandi',
-    },
-    {
-        image: '/siicIITKanpur.webp',
-        width: 300,
-        height: 140,
-        alt: 'IITKanpur',
-    },
-    { image: '/samsung.webp', width: 200, height: 100, alt: 'samsung' },
-    { image: '/AIC.webp', width: 220, height: 140, alt: 'AIC' },
-]
 function Supporters() {
     return (
-        <div className="px-4">
+        <div className="flex flex-col gap-4 px-4 md:gap-6 lg:gap-8">
             <p className="text-center text-2xl font-bold tracking-wider md:text-4xl">
                 <span className="relative w-fit">
                     Supported{' '}
@@ -63,17 +39,12 @@ function Supporters() {
                 By
             </p>
             <div>
-                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 lg:gap-14">
-                    {[...images].map((item, index) => (
-                        <Image
-                            className="sm:w-30 w-28 md:w-32 lg:w-36"
-                            src={item.image}
-                            width={item.width}
-                            height={item.height}
-                            alt={item.alt}
-                            key={index}
-                        />
-                    ))}
+                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10 lg:gap-16">
+                    <div className="min-h-12 min-w-20 bg-[url(/google.webp)] bg-contain bg-center bg-no-repeat min-[565px]:min-h-16 min-[565px]:min-w-28 sm:min-h-16 sm:min-w-32 lg:min-h-24 lg:min-w-36"></div>
+                    <div className="min-h-16 min-w-24 bg-[url(/AIC.webp)] bg-contain bg-center bg-no-repeat min-[565px]:min-h-16 min-[565px]:min-w-28 sm:min-h-16 sm:min-w-32 lg:min-h-24 lg:min-w-36"></div>
+                    <div className="min-h-12 min-w-20 bg-[url(/iitMandi.webp)] bg-cover bg-center bg-no-repeat dark:bg-[url(/iitMandiDark.svg)] min-[565px]:min-h-16 min-[565px]:min-w-28 sm:min-h-20 sm:min-w-32 lg:min-h-24 lg:min-w-36"></div>
+                    <div className="min-h-12 min-w-24 bg-[url(/Samsung_Logo.webp)] bg-contain bg-center bg-no-repeat min-[565px]:min-h-16 min-[565px]:min-w-28 sm:min-h-16 sm:min-w-32 lg:min-h-24 lg:min-w-36"></div>
+                    <div className="min-h-12 min-w-28 bg-[url(/siicIITKanpur.webp)] bg-contain bg-center bg-no-repeat dark:bg-[url(/siicIITKanpurDark.webp)] min-[565px]:min-h-16 min-[565px]:min-w-36 sm:min-h-16 sm:min-w-32 lg:min-h-24 lg:min-w-40"></div>
                 </div>
             </div>
         </div>
