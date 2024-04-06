@@ -1,16 +1,16 @@
-import { Button } from '@/components/ui/button'
 import Navbar from '@/components/Navbar'
-import Link from 'next/link'
 import Supporters from '@/components/Supporters'
 import Image from 'next/image'
 import About from '@/components/About'
+import Link from 'next/link'
+import WhyAbleInnovation from '@/components/WhyAbleInnovation'
 
 export default function Home() {
     return (
         <>
-            <main className="flex min-h-dvh flex-col gap-10 text-black dark:text-white">
+            <main className="flex min-h-dvh flex-col gap-6 text-black dark:text-white md:gap-8">
                 <Navbar />
-                <div className="mx-auto mt-11 flex w-full max-w-7xl flex-col items-center justify-center gap-4 sm:flex-1">
+                <div className="mx-auto mt-12 flex w-full max-w-7xl flex-col items-center justify-center gap-4 sm:flex-1">
                     <h1 className="relative text-center text-3xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
                         {"World's "}
                         <span className="relative">
@@ -94,16 +94,25 @@ export default function Home() {
                     <div className="text-center text-xs font-semibold underline underline-offset-2 sm:text-sm md:text-base lg:text-lg">
                         <p>Designed For Deaf, Blind, Mute</p>
                     </div>
-                    <div>
-                        <Button className="px-3 py-1 text-xs font-bold sm:px-4 sm:py-2 lg:px-6 lg:text-sm ">
-                            <Link href="/early">Get Early Access</Link>
-                        </Button>
+                    <div className="mt-0 md:mt-2">
+                        <Link
+                            href={'/early'}
+                            className="rounded-md bg-black px-3 py-2 text-xs font-bold text-white dark:bg-white dark:text-black sm:px-4 sm:py-2 lg:px-6 lg:py-3 lg:text-sm"
+                        >
+                            Get Early Access
+                        </Link>
                     </div>
                 </div>
-                <Supporters />
+                <div>
+                    <Supporters />
+                </div>
+                <div>
+                    <About />
+                </div>
+                <div>
+                    <WhyAbleInnovation />
+                </div>
             </main>
-
-            <About />
         </>
     )
 }
