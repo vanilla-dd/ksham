@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export function About() {
     return (
-        <main className="grid place-items-center">
+        <main className="grid place-items-center px-2">
             <h1 className="flex justify-center gap-2 pb-6 text-xl font-bold tracking-wider sm:text-2xl md:text-3xl lg:text-4xl">
                 Our
                 <span className="relative inline-block">
@@ -50,29 +50,31 @@ export function About() {
                     </svg>
                 </span>
             </h1>
-            <div className="grid w-full max-w-6xl grid-cols-4 grid-rows-4 justify-center gap-2 rounded-md border-2 p-2 text-green-400 shadow-lg lg:grid-cols-6 lg:p-6">
-                <div className="col-span-2 flex flex-col items-center justify-center gap-1 rounded-xl bg-zinc-700 px-3 py-4 text-xs tracking-wider lg:col-span-1 lg:px-6 lg:py-8">
+            <div className="sm: grid w-full max-w-6xl grid-cols-4 grid-rows-11 justify-center gap-2 rounded-md border-2 p-2 text-green-400 shadow-lg sm:grid-rows-8 lg:grid-cols-6 lg:grid-rows-4 lg:p-6">
+                <div className="col-span-2 flex flex-col items-center justify-center gap-1 rounded-xl bg-zinc-700 px-3 py-4 text-xs tracking-wider sm:col-span-1 lg:col-span-1 lg:px-6 lg:py-8">
                     <span className="text-2xl font-bold lg:text-4xl">5</span>
                     Microphones
                 </div>
-                <div className="col-span-2 flex flex-col items-center justify-center gap-2 rounded-xl bg-zinc-700 px-3 py-4 tracking-wider lg:col-span-1 lg:px-6 lg:py-8">
-                    <span className="text-4xl font-bold">1080p</span>
+                <div className="col-span-2 flex flex-col items-center justify-center rounded-xl bg-zinc-700 px-3 py-4 tracking-wider sm:col-span-1 lg:col-span-1 lg:px-6 lg:py-8">
+                    <span className="text-2xl font-bold lg:text-4xl">
+                        1080p
+                    </span>
                     Camera
                 </div>
-                <div className="col-span-4 row-span-2 flex flex-col justify-around rounded-xl bg-zinc-700 px-4 py-6 lg:col-span-2">
+                <div className="col-span-4 row-span-2 flex flex-col justify-around rounded-xl bg-zinc-700 px-4 py-6 sm:col-span-2 lg:col-span-2">
                     <Image
-                        src={'/glasscase.svg'}
+                        src={'/glassCase.svg'}
                         alt="glasses case"
                         width={100}
                         height={100}
                         className="w-full drop-shadow-[10px_10px_20px_rgba(0,0,0,.5)]"
                     />
-                    <p className="text-center text-4xl font-bold tracking-wider">
+                    <p className="text-center text-2xl font-bold tracking-wider lg:text-4xl">
                         Smart Case
                     </p>
                 </div>
-                <div className="col-span-4 flex items-center justify-center rounded-xl bg-zinc-700 lg:col-span-2">
-                    <p className="text-center text-xl leading-10 lg:text-2xl">
+                <div className="col-span-4 flex items-center justify-center rounded-xl bg-zinc-700 sm:col-span-2 lg:col-span-2">
+                    <p className="text-center text-lg lg:text-2xl lg:leading-10">
                         <span className="relative font-extrabold tracking-wide text-rose-600">
                             Patented{' '}
                             <svg
@@ -115,16 +117,18 @@ export function About() {
                                 />
                             </svg>
                         </span>
-                        Bone Conduction Transducer
+                        <span className="relative z-50">
+                            Bone Conduction Transducer
+                        </span>
                     </p>
                 </div>
-                <div className="col-span-4 flex items-center  justify-center rounded-xl bg-zinc-700 py-4 lg:col-span-2">
+                <div className="col-span-4 flex items-center justify-center rounded-xl bg-zinc-700 py-4 sm:col-span-2 lg:col-span-2">
                     <svg
                         version="1.1"
                         id="Layer_1"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
-                        className="w-24"
+                        className="w-14 lg:w-20"
                     >
                         <path
                             style={{ fill: '#D5DCED' }}
@@ -167,12 +171,14 @@ export function About() {
 	c1.16-2.899-0.975-6.054-4.098-6.054h-48.138C232.491,167.724,228.894,170.632,228.022,174.702z"
                         />
                     </svg>
-                    <span className="text-2xl">Day long battery backup</span>
+                    <p className="text-xl font-bold lg:text-2xl">
+                        Day long battery backup
+                    </p>
                 </div>
-                <div className="col-span-2 rounded-xl bg-zinc-700 px-2 py-4 lg:col-span-1">
+                <div className="col-span-2 rounded-xl bg-zinc-700 px-2 py-4 sm:row-start-4 lg:col-span-1 lg:row-start-auto">
                     Desktop mode
                 </div>
-                <div className="col-span-2 row-start-7 rounded-xl bg-zinc-700 px-2 py-4 lg:col-span-1 lg:row-start-auto">
+                <div className="col-span-2 row-start-7 rounded-xl bg-zinc-700 px-2 py-4 sm:col-span-1 sm:row-span-2 sm:row-start-5 lg:col-span-1 lg:row-span-1">
                     Lidar Sensor
                 </div>
                 <div className="col-span-2 row-span-2 flex flex-col justify-around rounded-xl bg-zinc-700 py-4 text-center lg:col-span-1">
@@ -352,11 +358,11 @@ export function About() {
                             </g>
                         </svg>
                     </div>
-                    <p className="text-lg font-semibold">
+                    <p className="text-sm font-semibold lg:text-lg">
                         Object & Face recognition
                     </p>
                 </div>
-                <div className="col-span-4 row-span-2 flex flex-col justify-around rounded-xl bg-zinc-700 py-2 lg:col-span-2">
+                <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-xl bg-zinc-700 py-2 sm:col-span-3 lg:col-span-2 lg:justify-around">
                     <div className="grid grid-cols-2 py-4">
                         <div className="col-span-1 justify-self-center">
                             <svg
@@ -365,7 +371,7 @@ export function About() {
                                 id="Capa_1"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 738.561 738.561"
-                                className="h-16 w-16"
+                                className="h-10 w-10 lg:h-14 lg:w-14"
                             >
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                                 <g
@@ -386,7 +392,7 @@ export function About() {
                         </div>
                         <div className="col-span-full justify-self-center">
                             <svg
-                                className="h-16 w-16 rotate-[80deg]"
+                                className="h-10 w-10 rotate-[80deg] lg:h-16 lg:w-16"
                                 viewBox="0 0 77 85"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -414,18 +420,18 @@ export function About() {
                                 />
                             </svg>
                         </div>
-                        <div className="col-start-2 justify-self-center text-4xl font-bold text-white ">
+                        <div className="col-start-2 justify-self-center text-xl font-bold text-white lg:text-4xl ">
                             W
                         </div>
                     </div>
-                    <p className="text-center text-2xl font-bold">
+                    <p className="text-center text-lg font-bold lg:text-2xl">
                         Real time sign language conversion
                     </p>
                 </div>
-                <div className="col-span-3 rounded-xl bg-zinc-700">
+                <div className="col-span-4 rounded-xl bg-zinc-700 lg:col-span-3">
                     Offline processing
                 </div>
-                <div className="col-span-3 rounded-xl bg-zinc-700">
+                <div className="col-span-4 rounded-xl bg-zinc-700 lg:col-span-3">
                     Bluetooth + Rechargable
                 </div>
             </div>
