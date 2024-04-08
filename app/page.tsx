@@ -4,6 +4,7 @@ import Image from 'next/image'
 import About from '@/components/About'
 import Link from 'next/link'
 import WhyAbleInnovation from '@/components/WhyAbleInnovation'
+import Footer from '@/components/Footer'
 
 export default function Home() {
     return (
@@ -111,6 +112,9 @@ export default function Home() {
                 </div>
                 <div>
                     <WhyAbleInnovation />
+                </div>
+                <div>
+                    <Footer />
                 </div>
             </main>
         </>

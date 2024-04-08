@@ -14,7 +14,7 @@ const Navbar = async () => {
         <div className="sticky inset-x-0 top-0 z-50">
             <header className="flex h-full items-center justify-between border-b bg-white px-2 py-2 dark:bg-black sm:px-4">
                 <Link href={'/'}>
-                    <div className="w-16 border-2 fill-black px-1 py-3 transition-colors duration-300 hover:border-black/35 dark:fill-white dark:hover:border-white/35 sm:w-20 sm:px-2 md:w-24 md:px-3 lg:w-32 lg:px-4 ">
+                    <div className="w-16 border-2 fill-black px-1 py-3 transition-colors duration-300 hover:border-black/35 dark:fill-white dark:hover:border-white/35 sm:w-20 sm:px-2 md:w-24 md:px-3 lg:w-32 lg:px-4">
                         <svg viewBox="158.0189 161.5484 284.8677 59.5033">
                             <g
                                 transform="matrix(0.10000000149011613, 0, 0, -0.10000000149011613, 153.8865837139872, 235.46290939245975)"
