@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Bluetooth, MonitorCheck, PlugZap, Plus, Sofa } from 'lucide-react'
 
 // refactor as needed more product info
 function BentoGridUI() {
@@ -30,22 +31,11 @@ function BentoGridUI() {
                     <span className="relative font-extrabold tracking-wide text-rose-600">
                         Patented{' '}
                         <svg
-                            className="absolute -left-2 -top-4 w-28 rotate-180 lg:w-32"
-                            viewBox="101.8847 131.459 365.5387 210.8862"
+                            className="absolute -left-1 -top-4 w-24 rotate-180 scale-x-110 scale-y-75 lg:left-2 lg:scale-x-150"
+                            viewBox="0 0 104 73"
+                            fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <defs>
-                                <linearGradient id="SvgjsLinearGradient1002">
-                                    <stop
-                                        stopColor="hsl(265, 55%, 60%)"
-                                        offset="0"
-                                    />
-                                    <stop
-                                        stopColor="hsl(265, 55%, 30%)"
-                                        offset="1"
-                                    />
-                                </linearGradient>
-                            </defs>
                             <motion.path
                                 whileInView="animated"
                                 viewport={{ once: true }}
@@ -61,10 +51,9 @@ function BentoGridUI() {
                                     },
                                 }}
                                 initial="hidden"
-                                d="M 161.744 187.969 C 168.913 183.339 188.028 167.359 204.755 160.191 C 221.481 153.022 239.85 147.497 262.102 144.958 C 284.355 142.419 313.626 140.776 338.267 144.958 C 362.909 149.14 390.239 157.353 409.952 170.048 C 429.665 182.742 447.437 203.351 456.547 221.123 C 465.657 238.895 471.033 260.848 464.611 276.678 C 458.19 292.509 439.821 306.398 418.016 316.105 C 396.212 325.812 356.637 330.591 333.787 334.922 C 310.938 339.253 301.678 341.344 280.92 342.091 C 260.161 342.837 229.546 341.941 209.235 339.402 C 188.924 336.864 173.542 334.325 159.056 326.858 C 144.57 319.39 132.622 305.651 122.318 294.599 C 112.013 283.548 109.62 270.258 104.99 258.609 C 100.36 246.961 101.804 230.038 103.596 216.298 C 105.388 202.558 116.785 199.265 131.267 187.814 C 145.749 176.363 152.52 174.117 162.675 164.41 C 172.831 154.702 191.796 147.137 200.608 142.507 C 209.419 137.878 241.516 132.654 244.652 131.459"
-                                fill="none"
-                                strokeWidth="10"
-                                stroke='url("#SvgjsLinearGradient1002")'
+                                d="M57.1576 7.44863C53.831 5.16772 51.182 3.5966 47.193 3.21034C43.8401 2.88567 40.4399 2.98776 37.104 3.43439C27.4742 4.72371 18.5278 10.1981 11.7423 16.9887C4.51029 24.226 -0.0601712 34.0308 0.892389 44.4084C2.03799 56.8891 11.2616 65.8317 22.6653 69.7276C37.5325 74.8068 55.3079 71.9896 69.5261 65.9911C82.4612 60.534 98.1688 50.2841 102.471 35.9373C106.219 23.4392 95.872 11.7376 85.8562 5.97051C77.5557 1.19116 67.8156 -0.854239 58.4918 2.0932C51.6146 4.26724 44.7193 7.80313 39.1564 12.4182C32.891 17.616 28.6773 24.2755 24.1785 30.9319"
+                                stroke="currentColor"
+                                strokeWidth="1.2047"
                                 strokeLinecap="round"
                             />
                         </svg>
@@ -74,7 +63,7 @@ function BentoGridUI() {
                     </span>
                 </p>
             </div>
-            <div className="col-span-4 flex items-center justify-center rounded-xl bg-zinc-700 py-4 sm:col-span-2 lg:col-span-2">
+            <div className="col-span-4 flex items-center justify-center rounded-xl bg-zinc-700 py-2 sm:col-span-2 lg:col-span-2">
                 <svg
                     version="1.1"
                     id="Layer_1"
@@ -127,11 +116,53 @@ function BentoGridUI() {
                     Day long battery backup
                 </p>
             </div>
-            <div className="col-span-2 rounded-xl bg-zinc-700 px-2 py-4 sm:row-start-4 lg:col-span-1 lg:row-start-auto">
-                Desktop mode
+            <div className="col-span-2 flex flex-col items-center justify-around rounded-xl bg-zinc-700 px-2 py-4 text-center sm:row-start-4 lg:col-span-1 lg:row-start-auto">
+                <p className="text-sm">Desktop mode</p>
+                <MonitorCheck className="stroke-black" />
+                <p className="text-xs tracking-wider text-white">
+                    fully functional Desktop inbuilt
+                </p>
             </div>
-            <div className="col-span-2 row-start-7 rounded-xl bg-zinc-700 px-2 py-4 sm:col-span-1 sm:row-span-2 sm:row-start-5 lg:col-span-1 lg:row-span-1">
-                Lidar Sensor
+            <div className="col-span-2 row-start-7 rounded-xl bg-zinc-700 px-2 py-2 text-center sm:col-span-1 sm:row-span-2 sm:row-start-5 lg:col-span-1 lg:row-span-1">
+                <p className="font-bold">Lidar Sensor</p>
+                <div className="flex h-auto flex-col justify-around sm:h-full lg:h-auto">
+                    <div className="self-end">
+                        <Sofa className="h-7 w-7 stroke-black" />
+                    </div>
+                    <div className="relative self-center">
+                        <svg
+                            viewBox="0 0 246 345"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-12 w-12 -rotate-90 sm:-rotate-[120deg] sm:scale-[2] lg:-rotate-90 lg:scale-150"
+                        >
+                            <path
+                                d="M231.654 338.871C226.62 328.369 215.525 326.434 199.105 326.459M231.654 338.871C225.998 327.972 228.442 313.96 239.986 304.673M231.654 338.871C230.13 339.104 224.107 318.996 210.59 297.968M199.326 279.195L187.311 259.67M176.046 242.774L165.908 227.004M155.62 210.859L143.605 192.461M133.535 178.327L121.895 160.68M112.283 146.111L100.268 129.214M89.0786 113.445L78.1898 97.2995M68.4273 83.4069L56.0365 67.6368M44.4719 53.3697C41.9687 49.615 35.9861 41.0541 32.0812 36.8487M22.3189 24.457L5.79785 6.05859"
+                                stroke="#ffeeaa"
+                                strokeWidth="11.3869"
+                                strokeMiterlimit="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                        <p className="absolute bottom-0 left-1/2 text-xs text-[#ffeeaa]">
+                            2m
+                        </p>
+                    </div>
+                    <div className="">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-8 w-8"
+                        >
+                            <path
+                                d="M7.90885 5H8.75C9.16421 5 9.5 5.33579 9.5 5.75C9.5 6.1297 9.21785 6.44349 8.85177 6.49315L8.75 6.5H7.90885C7.7339 6.5 7.56563 6.5611 7.4322 6.67094L7.35655 6.74259L5.283 8.999L8.74883 8.99956C9.90849 8.99956 10.8632 9.87687 10.9856 11.004H13.0132C13.1356 9.87687 14.0903 8.99956 15.25 8.99956L18.727 8.999L16.6438 6.74141C16.5254 6.61317 16.3669 6.53102 16.1962 6.5072L16.0925 6.5H15.25C14.8358 6.5 14.5 6.16421 14.5 5.75C14.5 5.3703 14.7822 5.05651 15.1482 5.00685L15.25 5H16.0925C16.6579 5 17.2 5.21269 17.6133 5.59178L17.7462 5.72424L21.3881 9.67141C21.4384 9.72588 21.479 9.78579 21.5101 9.84906C21.816 10.2334 21.9988 10.7201 21.9988 11.2496V14.7461C21.9988 16.541 20.5438 17.9961 18.7488 17.9961H16.25C14.4551 17.9961 13 16.541 13 14.7461L12.999 12.504H10.998L10.9988 14.7461C10.9988 16.541 9.54376 17.9961 7.74883 17.9961H5.25C3.45507 17.9961 2 16.541 2 14.7461V11.2496C2 10.6879 2.20576 10.1744 2.54602 9.78017L2.58382 9.72499L2.6277 9.67259L6.25196 5.72776C6.63545 5.31035 7.16059 5.05479 7.72092 5.00785L7.90885 5H8.75H7.90885Z"
+                                fill="#000000"
+                            />
+                        </svg>
+                    </div>
+                </div>
             </div>
             <div className="col-span-2 row-span-2 flex flex-col justify-around rounded-xl bg-zinc-700 py-4 text-center lg:col-span-1">
                 <div className="flex w-full flex-col items-center">
@@ -310,7 +341,7 @@ function BentoGridUI() {
                         </g>
                     </svg>
                 </div>
-                <p className="text-sm font-semibold lg:text-lg">
+                <p className="px-2 text-sm font-semibold lg:text-lg">
                     Object & Face recognition
                 </p>
             </div>
@@ -380,11 +411,34 @@ function BentoGridUI() {
                     Real time sign language conversion
                 </p>
             </div>
-            <div className="col-span-4 rounded-xl bg-zinc-700 lg:col-span-3">
+            <div className="col-span-4 flex flex-col justify-around rounded-xl bg-zinc-700 px-2 py-2 text-center font-bold lg:col-span-3">
                 Offline processing
+                <div className="flex flex-col items-center gap-2">
+                    <svg
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-10 w-10"
+                    >
+                        <g fill="black">
+                            <path
+                                d="m 8 1.992188 c -2.617188 0 -5.238281 0.933593 -7.195312 2.808593 l -0.496094 0.480469 c -0.3984378 0.378906 -0.410156 1.011719 -0.03125 1.410156 c 0.382812 0.398438 1.015625 0.410156 1.414062 0.027344 l 0.5 -0.476562 c 3.085938 -2.953126 8.53125 -2.953126 11.617188 0 l 0.5 0.476562 c 0.398437 0.382812 1.03125 0.371094 1.414062 -0.027344 c 0.378906 -0.398437 0.367188 -1.03125 -0.03125 -1.410156 l -0.496094 -0.480469 c -1.957031 -1.875 -4.578124 -2.808593 -7.195312 -2.808593 z m -0.03125 4.007812 c -1.570312 0.011719 -3.128906 0.628906 -4.207031 1.8125 l -0.5 0.550781 c -0.375 0.40625 -0.347657 1.042969 0.0625 1.414063 c 0.410156 0.371094 1.042969 0.339844 1.414062 -0.070313 l 0.5 -0.542969 c 1.242188 -1.363281 3.992188 -1.492187 5.398438 -0.128906 c 0.121093 -0.023437 0.242187 -0.035156 0.363281 -0.035156 c 0.53125 0 1.039062 0.210938 1.414062 0.585938 l 0.222657 0.222656 c 0.011719 -0.011719 0.023437 -0.019532 0.039062 -0.03125 c 0.40625 -0.371094 0.4375 -1.007813 0.0625 -1.414063 l -0.5 -0.550781 c -1.125 -1.230469 -2.703125 -1.824219 -4.269531 -1.8125 z m 0.03125 4 c -0.511719 0 -1.023438 0.195312 -1.414062 0.585938 c -0.78125 0.78125 -0.78125 2.046874 0 2.828124 s 2.046874 0.78125 2.828124 0 c 0.210938 -0.210937 0.359376 -0.453124 0.457032 -0.714843 l -0.285156 -0.285157 c -0.554688 -0.554687 -0.707032 -1.367187 -0.46875 -2.070312 c -0.335938 -0.226562 -0.726563 -0.34375 -1.117188 -0.34375 z m 0 0"
+                                fillOpacity="0.34902"
+                            />
+                            <path d="m 11 10 c -0.265625 0 -0.519531 0.105469 -0.707031 0.292969 c -0.390625 0.390625 -0.390625 1.023437 0 1.414062 l 1.292969 1.292969 l -1.292969 1.292969 c -0.390625 0.390625 -0.390625 1.023437 0 1.414062 s 1.023437 0.390625 1.414062 0 l 1.292969 -1.292969 l 1.292969 1.292969 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 s 0.390625 -1.023437 0 -1.414062 l -1.292969 -1.292969 l 1.292969 -1.292969 c 0.390625 -0.390625 0.390625 -1.023437 0 -1.414062 c -0.1875 -0.1875 -0.441406 -0.292969 -0.707031 -0.292969 s -0.519531 0.105469 -0.707031 0.292969 l -1.292969 1.292969 l -1.292969 -1.292969 c -0.1875 -0.1875 -0.441406 -0.292969 -0.707031 -0.292969 z m 0 0" />
+                        </g>
+                    </svg>
+                    <p className="text-sm text-[#ffeeaa] md:text-base lg:text-lg">
+                        No internet but still kicking...
+                    </p>
+                </div>
             </div>
-            <div className="col-span-4 rounded-xl bg-zinc-700 lg:col-span-3">
-                Bluetooth + Rechargable
+            <div className="col-span-4 flex flex-col rounded-xl bg-zinc-700 py-2 text-center lg:col-span-3">
+                <p>Bluetooth + Rechargable</p>
+                <div className="flex flex-1 items-center justify-center gap-10">
+                    <Bluetooth className="h-12 w-12 stroke-[#ffeeaa]" />
+                    <Plus className="stroke-[#ffeeaa]" />
+                    <PlugZap className="h-12 w-12 stroke-[#ffeeaa]" />
+                </div>
             </div>
         </>
     )

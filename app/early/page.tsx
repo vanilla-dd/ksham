@@ -23,6 +23,7 @@ const formSchema = z.object({
         .email({ message: 'Enter a valid email' }),
 })
 
+// still wip
 function ProfileForm() {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),

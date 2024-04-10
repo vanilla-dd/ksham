@@ -1,7 +1,7 @@
 import React from 'react'
 
 function WhyAbleInnovation() {
-    return <div>WhyAbleInnovation</div>
+    return <div>W.I.P</div>
 }
 
 export default WhyAbleInnovation

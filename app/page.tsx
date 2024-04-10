@@ -3,7 +3,6 @@ import Supporters from '@/components/Supporters'
 import Image from 'next/image'
 import About from '@/components/About'
 import Link from 'next/link'
-import WhyAbleInnovation from '@/components/WhyAbleInnovation'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -110,9 +109,7 @@ export default function Home() {
                 <div>
                     <About />
                 </div>
-                <div>
-                    <WhyAbleInnovation />
-                </div>
+                {/* <WhyAbleInnovation /> */}
                 <div>
                     <Footer />
                 </div>

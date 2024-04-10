@@ -2,9 +2,9 @@
 import { motion } from 'framer-motion'
 import BentoGridUI from './BentoGridUI'
 
-export function About() {
+function About() {
     return (
-        <main className="grid place-items-center px-2">
+        <main className="grid place-items-center px-2" id="about">
             <h1 className="flex justify-center gap-2 pb-6 text-xl font-bold tracking-wider sm:text-2xl md:text-3xl lg:text-4xl">
                 Our
                 <span className="relative inline-block">
@@ -50,7 +50,7 @@ export function About() {
                     </svg>
                 </span>
             </h1>
-            <div className="sm: grid w-full max-w-6xl grid-cols-4 grid-rows-11 justify-center gap-2 rounded-md border-2 p-2 text-green-400 shadow-lg sm:grid-rows-8 lg:grid-cols-6 lg:grid-rows-4 lg:p-6">
+            <div className="sm: grid w-full max-w-6xl grid-cols-4 grid-rows-11 justify-center gap-2 rounded-md border-2 p-4 text-green-400 shadow-lg sm:grid-rows-8 lg:grid-cols-6 lg:grid-rows-4 lg:p-6">
                 <BentoGridUI />
             </div>
         </main>
